@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="it">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>BTS_4.1 - Bootstrap Components</title>
+	<!-- Bootstrap CSS -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<!-- Top Navbar with a badge -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+	<div class="container">
+		<a class="navbar-brand" href="#">BTS 4.1</a>
+		<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="mainNav">
+			<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+				<li class="nav-item">
+					<a class="nav-link active" aria-current="page" href="#">Home <span class="badge bg-light text-primary ms-2">4</span></a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#">Features</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#">Pricing</a>
+				</li>
+			</ul>
+			<form class="d-flex" role="search">
+				<input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+				<button class="btn btn-outline-light" type="submit">Search</button>
+			</form>
+		</div>
+	</div>
+</nav>
+
+<!-- Main container with grid layout -->
+<main class="container my-4">
+	<div class="row g-4">
+		<!-- Left column: List group, Collapse -->
+		<div class="col-lg-4">
+			<h5>List group with badges</h5>
+			<ul class="list-group mb-3">
+				<li class="list-group-item d-flex justify-content-between align-items-center">
+					Messages
+					<span class="badge bg-primary rounded-pill">14</span>
+				</li>
+				<li class="list-group-item d-flex justify-content-between align-items-center">
+					Notifications
+					<span class="badge bg-success rounded-pill">2</span>
+				</li>
+				<li class="list-group-item d-flex justify-content-between align-items-center">
+					Tasks
+					<span class="badge bg-danger rounded-pill">7</span>
+				</li>
+			</ul>
+
+			<h5>Collapse example</h5>
+			<p>
+				<a class="btn btn-secondary" data-bs-toggle="collapse" href="#collapseInfo" role="button" aria-expanded="false" aria-controls="collapseInfo">
+					Toggle info
+				</a>
+			</p>
+			<div class="collapse" id="collapseInfo">
+				<div class="card card-body">
+					Questo contenuto è mostrato/ nascosto usando il componente Collapse di Bootstrap.
+				</div>
+			</div>
+		</div>
+
+		<!-- Right column: Card, Pagination -->
+		<div class="col-lg-8">
+			<h5>Card</h5>
+			<div class="card mb-3">
+				<img src="images\speed_trying_not_to_laugh.jpg" class="card-img-top" alt="Placeholder">
+				<div class="card-body">
+					<h5 class="card-title">Esempio di Card</h5>
+					<p class="card-text">Questa card mostra testo, un'immagine placeholder e bottoni di azione.</p>
+					<p class="card-text"><small class="text-muted">Ultimo aggiornamento 3 minuti fa</small></p>
+					<a href="#" class="btn btn-primary me-2">Azione</a>
+					<a href="#" class="btn btn-outline-secondary">Altro</a>
+				</div>
+			</div>
+
+			<!-- Pagination -->
+			<nav aria-label="Page navigation example">
+				<ul class="pagination">
+					<li class="page-item disabled"><a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a></li>
+					<li class="page-item"><a class="page-link" href="#">1</a></li>
+					<li class="page-item active" aria-current="page"><a class="page-link" href="#">2</a></li>
+					<li class="page-item"><a class="page-link" href="#">3</a></li>
+					<li class="page-item"><a class="page-link" href="#">Next</a></li>
+				</ul>
+			</nav>
+
+			<!-- Small example combining list group inside a card -->
+			<div class="card mt-4">
+				<div class="card-header">
+					Attività recenti <span class="badge bg-info text-dark ms-2">3</span>
+				</div>
+				<ul class="list-group list-group-flush">
+					<li class="list-group-item">Villanueva Mattheus<span class="badge bg-secondary float-end">new</span></li>
+					<li class="list-group-item">Backup completato <span class="badge bg-success float-end">ok</span></li>
+					<li class="list-group-item">Errore server <span class="badge bg-danger float-end">1</span></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</main>
+
+<!-- Bootstrap JS bundle (includes Popper) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
